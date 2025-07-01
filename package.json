@@ -1,6 +1,6 @@
 {
   "name": "notifications-to-webhook",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Send notifications to webhook services like Slack",
   "main": "index.js",
   "bin": {
@@ -26,7 +26,7 @@
     "url": "https://github.com/koinunopochi/notifications-to-webhook/issues"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=20.6.0"
   },
   "files": [
     "index.js",

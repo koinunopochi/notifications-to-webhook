@@ -9,11 +9,11 @@ npxで直接実行できます。インストール不要です。
 ### 基本的な使用方法
 
 ```bash
-# Slackに通知を送信
-npx notifications-to-webhook -c slack -m "Hello, World!"
+# Slackに通知を送信（環境変数ファイル指定）
+npx notifications-to-webhook@latest -c slack -m "Hello, World!" -e ~/.config/notifications-to-webhook/.env
 
-# 環境変数ファイルを指定して実行
-npx notifications-to-webhook -e ./.env -c slack -m "テスト通知"
+# 現在のディレクトリの.envファイルを使用
+npx notifications-to-webhook@latest -e ./.env -c slack -m "テスト通知"
 ```
 
 ### オプション
@@ -35,15 +35,15 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/WEBHOOK/URL
 ## 使用例
 
 ```bash
-# 基本的な通知
-npx notifications-to-webhook --client slack --message "デプロイが完了しました"
+# 基本的な通知（環境変数ファイル指定）
+npx notifications-to-webhook@latest -c slack -m "デプロイが完了しました" -e ~/.config/notifications-to-webhook/.env
 
 # 短縮オプション
-npx notifications-to-webhook -c slack -m "ビルドエラーが発生しました"
+npx notifications-to-webhook@latest -c slack -m "ビルドエラーが発生しました" -e ./.env
 
 # 環境変数ファイルを指定
-npx notifications-to-webhook -e ./config/.env -c slack -m "処理完了"
+npx notifications-to-webhook@latest -e ./config/.env -c slack -m "処理完了"
 
 # CIでの利用例
-npx notifications-to-webhook -c slack -m "GitHub Actions: Deploy to production completed"
+npx notifications-to-webhook@latest -c slack -m "GitHub Actions: Deploy to production completed" -e ./.env
 ```
