@@ -13,11 +13,14 @@ npm install
 ### 基本的な使用方法
 
 ```bash
-# Slackに通知を送信
+# Slackに通知を送信（npm公開後）
 npx notifications-to-webhook -c slack -m "Hello, World!"
 
+# ローカル実行
+node index.js -c slack -m "Hello, World!"
+
 # 環境変数ファイルを指定して実行
-npx dotenv -e ~/.config/.env npx notifications-to-webhook -c slack -m "テスト通知"
+npx dotenv-cli -e ~/.config/.env node index.js -c slack -m "テスト通知"
 ```
 
 ### オプション
@@ -39,14 +42,14 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/WEBHOOK/URL
 ## 使用例
 
 ```bash
-# 基本的な使用
+# 基本的な使用（npm公開後）
 npx notifications-to-webhook --client slack --message "デプロイが完了しました"
 
-# 短縮形
-npx notifications-to-webhook -c slack -m "ビルドエラーが発生しました"
+# ローカル実行
+node index.js -c slack -m "ビルドエラーが発生しました"
 
 # 環境変数ファイルを指定
-npx dotenv -e ~/.config/project.env npx notifications-to-webhook -c slack -m "処理完了"
+npx dotenv-cli -e ~/.config/project.env node index.js -c slack -m "処理完了"
 ```
 
 ## 今後の対応予定

@@ -9,9 +9,31 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["webhook", "notification", "slack", "cli"],
-  "author": "",
+  "keywords": [
+    "webhook",
+    "notification",
+    "slack",
+    "cli"
+  ],
+  "author": "koinunopochi",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koinunopochi/notifications-to-webhook.git"
+  },
+  "homepage": "https://github.com/koinunopochi/notifications-to-webhook",
+  "bugs": {
+    "url": "https://github.com/koinunopochi/notifications-to-webhook/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE",
+    "example/"
+  ],
   "dependencies": {
     "axios": "^1.6.0",
     "commander": "^11.0.0",
